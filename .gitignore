@@ -1,0 +1,23 @@
+node_modules
+www
+.temp
+.sass-cache
+app/bower_components
+coverage
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+app/views/**/*.html
+
+app/scripts/configuration.js
+app/styles/ionic.app.css
+config.sh
+
+// Below lines make sure private items don't get checked in to git!
+scripts/certs/dist.cer
+scripts/certs/dist.p12
+scripts/profile/AppName_App_Store_Profile.mobileprovision
+scripts/profile/AppName_AdHoc_Profile.mobileprovision

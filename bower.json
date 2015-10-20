@@ -1,0 +1,16 @@
+{
+  "name": "appname",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "ionic": "1.1.0",
+    "ionic-platform-web-client": "0.2.0",
+    "ngCordova": "~0.1.20-alpha"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.4.3"
+  },
+  "resolutions": {
+    "angular": "1.4.3"
+  }
+}

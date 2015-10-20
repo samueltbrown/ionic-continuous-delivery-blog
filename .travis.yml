@@ -1,0 +1,35 @@
+language: objective-c
+os: osx
+osx_image: xcode7
+before_install:
+- export LANG=en_US.UTF-8
+- brew update
+- npm install -g npm@2.14.5
+- npm install -g grunt-cli cordova ionic
+before_script:
+- ./scripts/decrypt-key.sh
+- ./scripts/add-key.sh
+script:
+- npm install
+- grunt test
+- grunt pushCoverage
+- ionic platform add ios
+- ionic plugin add cordova-plugin-app-version
+- ionic plugin add cordova-plugin-network-information
+- ionic plugin add ionic-plugin-keyboard
+- ionic plugin add cordova-plugin-x-toast
+- ionic plugin add phonegap-plugin-push
+- ionic build ios --device --release
+- ionic build ios --device --release
+after_success:
+- ./scripts/package-and-upload.sh
+notifications:
+  hipchat: XXXXX@Your Room
+env:
+  global:
+  - APP_NAME="YourApp"
+  - DEVELOPER_NAME="iPhone Distribution: Company LLC (IOSAPPID)"
+  - PROFILE_NAME="AppName_Ad_Hoc_Profile" //exclude 'mobileprovision'
+  - PROFILE_UUID="11111-11111-1111111-111111-11111"
+  - DELIVER_WHAT_TO_TEST="Awesome new features!"
+  - HOCKEYAPP_UPLOAD_BRANCH="master"
