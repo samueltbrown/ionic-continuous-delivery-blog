@@ -1,6 +1,6 @@
 # ionic-continuous-delivery-blog
 
-This repo is intended to serve as a companion for my blog post: [Continuous Delivery with Ionic, iOS and TravisCI]().
+This repo is intended to serve as a companion for my blog post: [Continuous Delivery with Ionic, iOS and TravisCI](http://blog.samuelbrown.io/2015/10/20/continuous-delivery-with-ionic-ios-and-travisci/).
 
 Please understand that this is NOT a starter project and does NOT come with everything you will need to start an Ionic project.
 
